@@ -1,0 +1,27 @@
+.input_div{
+    display: none;
+}
+
+.errorBox{
+    display: none;
+}
+
+.viewTable{
+    display: none;
+}
+
+.rankTable{
+    display: none;
+}
+
+#updateTable{
+    display: none;
+}
+
+.errorBox{
+    display: none;
+}
+
+.deleteTable{
+    display: none;
+}

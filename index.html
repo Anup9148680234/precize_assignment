@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h3 class="main_head">Select a option and Submit</h3>
+    <select name="main_menu" id="menu">
+        <option value="insert">1. Insert data</option>
+        <option value="view">2. View all data</option>
+        <option value="rank">3. Get rank</option>
+        <option value="update">4. Update score</option>
+        <option value="delete">5. Delete one record</option>
+    </select>
+    <button type="button" onclick="evaluateInput()">Submit</button>
+
+
+    <div class="errorBox"></div>
+
+    <div class="input_div">
+        <h3>SAT score</h3>
+        <input type="text" placeholder="Name" id="name">
+        <br>
+        <input type="text" placeholder="Address" id="address">
+        <br>
+        <input type="text" id="city" name="city" placeholder="City">
+        <br>
+        <input type="text" id="country" name="country" placeholder="Country">
+        <br>
+        <input type="number" placeholder="Pincode" onchange="validatePincodeSize(this)" id="pincode">
+        <br>
+        <input type="number"  placeholder="SAT score (0-100)" id="sat" onchange="validateScoreSize(this)">
+        <br>
+        
+        <button class="submit" onclick="storeInput()">Add Record</button>
+    </div>
+
+    <div class="viewTable">
+
+    </div>
+
+    <div class="rankTable">
+        <div id="rankBox"></div>
+        <input type="text" id="rankInput">
+        <button onclick="displayRank()">Check Rank</button>
+    </div>
+
+    <div id="updateTable">
+        <input type="text" placeholder="Enter the name you want to update" id="updateName">
+        <input type="text" placeholder="New SAT Score" id="updateValue" onchange="validateScoreSize(this)">
+        <button id="updaterecord" onclick="updateRecord()">Update Score</button>
+    </div>
+
+    <div id="deleteTable">
+        <input type="text" placeholder="Enter the name you want to delete" id="deleteName">
+        <button id="deleterecord" onclick="deleteRecord()">Delete Score</button>
+    </div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
